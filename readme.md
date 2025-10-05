@@ -2,7 +2,9 @@ Simple app for helping leveling in Path of Exile.
 
 Copy the images to your build dir. Add your own step images in there.
 
-Create a `route.json` in the root dir and add your router there. 
+If you want different hotkeys then compile it with your own hotkeys for now.
+
+Create a `route.json` in the root dir and add your route there. 
 
 Something like:
 
