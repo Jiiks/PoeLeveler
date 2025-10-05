@@ -41,4 +41,7 @@ Something like:
 ]
 ```
 
+Ignore the horrible code and bad practices this was made in 20 minutes.
+
+
 <img width="1529" height="837" alt="image" src="https://github.com/user-attachments/assets/3a2306d6-81fd-4678-9dab-18a888544cea" />
