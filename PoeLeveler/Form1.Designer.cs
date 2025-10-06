@@ -80,7 +80,7 @@
             passiveTree.Location = new Point(3, 19);
             passiveTree.Name = "passiveTree";
             passiveTree.Size = new Size(869, 414);
-            passiveTree.SizeMode = PictureBoxSizeMode.CenterImage;
+            passiveTree.SizeMode = PictureBoxSizeMode.Zoom;
             passiveTree.TabIndex = 1;
             passiveTree.TabStop = false;
             // 
