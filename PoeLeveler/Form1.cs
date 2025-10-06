@@ -31,7 +31,13 @@ namespace PoeLeveler {
                 MessageBox.Show("Failed to get directory");
                 return false;
             }
-            var steps = JsonConvert.DeserializeObject<List<Step>>(File.ReadAllText("route.json"));
+            List<Step>? steps;
+            try {
+                steps = JsonConvert.DeserializeObject<List<Step>>(File.ReadAllText("route.json"));
+            }catch(Exception e) {
+                MessageBox.Show($"Failed to deserialize route.json {e.Message}");
+                return false;
+            }
             if (steps == null) {
                 MessageBox.Show("Failed to deserialize route.json");
                 return false;
