@@ -32,15 +32,15 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
-            label5 = new Label();
+            btnCopyRegex = new Button();
             label4 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             lblRegex = new Label();
             label1 = new Label();
             label3 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            comboBox1 = new ComboBox();
+            btnNext = new Button();
+            btnPrev = new Button();
+            cbStep = new ComboBox();
             groupBox4 = new GroupBox();
             nextStepsBox = new ListBox();
             splitContainer1 = new SplitContainer();
@@ -112,7 +112,7 @@
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(btnCopyRegex);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(flowLayoutPanel1);
             groupBox3.Controls.Add(lblRegex);
@@ -125,19 +125,23 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Misc";
             // 
-            // label5
+            // btnCopyRegex
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 61);
-            label5.Name = "label5";
-            label5.Size = new Size(168, 15);
-            label5.TabIndex = 10;
-            label5.Text = "Copy To Clipboard: Numpad 5";
+            btnCopyRegex.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnCopyRegex.FlatStyle = FlatStyle.Flat;
+            btnCopyRegex.ForeColor = SystemColors.Control;
+            btnCopyRegex.Location = new Point(6, 52);
+            btnCopyRegex.Name = "btnCopyRegex";
+            btnCopyRegex.Size = new Size(617, 39);
+            btnCopyRegex.TabIndex = 11;
+            btnCopyRegex.Text = "Copy To Clipboard(num5)";
+            btnCopyRegex.UseVisualStyleBackColor = true;
+            btnCopyRegex.Click += btnCopyRegex_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 85);
+            label4.Location = new Point(6, 107);
             label4.Name = "label4";
             label4.Size = new Size(81, 15);
             label4.TabIndex = 9;
@@ -147,7 +151,7 @@
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(6, 103);
+            flowLayoutPanel1.Location = new Point(6, 125);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(617, 434);
             flowLayoutPanel1.TabIndex = 8;
@@ -181,43 +185,45 @@
             label3.TabIndex = 2;
             label3.Text = "Wanted Links: BBBB, GBR|GBB, GBBR";
             // 
-            // button1
+            // btnNext
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(1422, 809);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Next(num6)";
-            button1.UseVisualStyleBackColor = true;
+            btnNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnNext.FlatStyle = FlatStyle.Flat;
+            btnNext.ForeColor = SystemColors.Control;
+            btnNext.Location = new Point(1422, 809);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(100, 23);
+            btnNext.TabIndex = 5;
+            btnNext.Text = "Next(num6)";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
-            // button2
+            // btnPrev
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1316, 809);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 23);
-            button2.TabIndex = 6;
-            button2.Text = "Prev(num4)";
-            button2.UseVisualStyleBackColor = true;
+            btnPrev.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnPrev.FlatStyle = FlatStyle.Flat;
+            btnPrev.ForeColor = SystemColors.Control;
+            btnPrev.Location = new Point(1316, 809);
+            btnPrev.Name = "btnPrev";
+            btnPrev.Size = new Size(100, 23);
+            btnPrev.TabIndex = 6;
+            btnPrev.Text = "Prev(num4)";
+            btnPrev.UseVisualStyleBackColor = true;
+            btnPrev.Click += btnPrev_Click;
             // 
-            // comboBox1
+            // cbStep
             // 
-            comboBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            comboBox1.BackColor = Color.FromArgb(30, 30, 30);
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.ForeColor = SystemColors.Control;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Start" });
-            comboBox1.Location = new Point(1127, 809);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(183, 23);
-            comboBox1.TabIndex = 7;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbStep.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            cbStep.BackColor = Color.FromArgb(30, 30, 30);
+            cbStep.FlatStyle = FlatStyle.Flat;
+            cbStep.ForeColor = SystemColors.Control;
+            cbStep.FormattingEnabled = true;
+            cbStep.Items.AddRange(new object[] { "Start" });
+            cbStep.Location = new Point(1127, 809);
+            cbStep.Name = "cbStep";
+            cbStep.Size = new Size(183, 23);
+            cbStep.TabIndex = 7;
+            cbStep.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // groupBox4
             // 
@@ -319,9 +325,9 @@
             Controls.Add(panel1);
             Controls.Add(splitContainer1);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(cbStep);
+            Controls.Add(btnPrev);
+            Controls.Add(btnNext);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Name = "Form1";
@@ -353,9 +359,9 @@
         private Label label3;
         private Label lblRegex;
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private ComboBox comboBox1;
+        private Button btnNext;
+        private Button btnPrev;
+        private ComboBox cbStep;
         private GroupBox groupBox4;
         private ListBox nextStepsBox;
         private FlowLayoutPanel flowLayoutPanel1;
@@ -363,8 +369,8 @@
         private SplitContainer splitContainer1;
         private CheckBox cbAlwaysOnTop;
         private Panel panel1;
-        private Label label5;
         private NumericUpDown numericFontSize;
         private Label label2;
+        private Button btnCopyRegex;
     }
 }

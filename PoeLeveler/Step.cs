@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PoeLeveler;
+﻿namespace PoeLeveler;
 public class Step {
 
+    public required string Id;
     public string? Passives;
     public string? Regex;
     public Bitmap? PassiveTree;
