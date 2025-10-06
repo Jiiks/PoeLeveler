@@ -320,7 +320,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "PoE Leveler";
             ((System.ComponentModel.ISupportInitialize)passiveTree).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
