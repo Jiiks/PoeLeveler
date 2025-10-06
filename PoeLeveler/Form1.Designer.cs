@@ -37,7 +37,6 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             lblRegex = new Label();
             label1 = new Label();
-            label3 = new Label();
             btnNext = new Button();
             btnPrev = new Button();
             cbStep = new ComboBox();
@@ -175,15 +174,6 @@
             label1.Size = new Size(146, 30);
             label1.TabIndex = 0;
             label1.Text = "Vendor Regex:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(669, 673);
-            label3.Name = "label3";
-            label3.Size = new Size(200, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Wanted Links: BBBB, GBR|GBB, GBBR";
             // 
             // btnNext
             // 
@@ -324,7 +314,6 @@
             ClientSize = new Size(1534, 844);
             Controls.Add(panel1);
             Controls.Add(splitContainer1);
-            Controls.Add(label3);
             Controls.Add(cbStep);
             Controls.Add(btnPrev);
             Controls.Add(btnNext);
@@ -346,7 +335,6 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericFontSize).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -356,7 +344,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
-        private Label label3;
         private Label lblRegex;
         private Label label1;
         private Button btnNext;
