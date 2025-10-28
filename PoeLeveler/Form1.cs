@@ -18,6 +18,11 @@ namespace PoeLeveler {
             FormClosing += RemoveHotkeys;
             if (!Initialize()) return;
             UpdateSteps();
+            if(File.Exists("notes.rtf")) {
+                richTextBox1.LoadFile("notes.rtf");
+            } else {
+                richTextBox1.Text = "notes.rtf does not exist";
+            }
         }
 
         private bool Initialize() {
@@ -167,7 +172,10 @@ namespace PoeLeveler {
             UpdateSteps();
         }
         private void numericFontSize_ValueChanged(object sender, EventArgs e) {
-            label1.Font = lblRegex.Font = nextStepsBox.Font = stepsBox.Font = new Font(stepsBox.Font.FontFamily, (float)numericFontSize.Value);
+            label1.Font = lblRegex.Font = nextStepsBox.Font = stepsBox.Font = richTextBox1.Font = new Font(stepsBox.Font.FontFamily, (float)numericFontSize.Value);
+            if (File.Exists("notes.rtf")) {
+                richTextBox1.LoadFile("notes.rtf");
+            }
         }
         private void btnNext_Click(object sender, EventArgs e) {
             NextStep();

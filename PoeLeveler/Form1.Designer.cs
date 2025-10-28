@@ -32,6 +32,7 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            richTextBox1 = new RichTextBox();
             btnCopyRegex = new Button();
             label4 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -47,6 +48,7 @@
             panel1 = new Panel();
             numericFontSize = new NumericUpDown();
             label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)passiveTree).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -71,7 +73,7 @@
             stepsBox.Location = new Point(3, 19);
             stepsBox.Name = "stepsBox";
             stepsBox.SelectionMode = SelectionMode.None;
-            stepsBox.Size = new Size(869, 152);
+            stepsBox.Size = new Size(835, 26);
             stepsBox.TabIndex = 0;
             // 
             // passiveTree
@@ -79,7 +81,7 @@
             passiveTree.Dock = DockStyle.Fill;
             passiveTree.Location = new Point(3, 19);
             passiveTree.Name = "passiveTree";
-            passiveTree.Size = new Size(869, 414);
+            passiveTree.Size = new Size(835, 414);
             passiveTree.SizeMode = PictureBoxSizeMode.Zoom;
             passiveTree.TabIndex = 1;
             passiveTree.TabStop = false;
@@ -91,7 +93,7 @@
             groupBox1.ForeColor = SystemColors.Control;
             groupBox1.Location = new Point(12, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(875, 436);
+            groupBox1.Size = new Size(841, 436);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Passive Tree";
@@ -103,7 +105,7 @@
             groupBox2.ForeColor = SystemColors.Control;
             groupBox2.Location = new Point(0, 0);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(875, 174);
+            groupBox2.Size = new Size(841, 48);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Current Steps";
@@ -111,18 +113,33 @@
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(richTextBox1);
             groupBox3.Controls.Add(btnCopyRegex);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(flowLayoutPanel1);
             groupBox3.Controls.Add(lblRegex);
             groupBox3.Controls.Add(label1);
             groupBox3.ForeColor = SystemColors.Control;
-            groupBox3.Location = new Point(893, 3);
+            groupBox3.Location = new Point(859, 3);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(629, 791);
+            groupBox3.Size = new Size(629, 577);
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
             groupBox3.Text = "Misc";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox1.BackColor = Color.FromArgb(30, 30, 30);
+            richTextBox1.BorderStyle = BorderStyle.None;
+            richTextBox1.Font = new Font("Segoe UI", 16F);
+            richTextBox1.ForeColor = SystemColors.Control;
+            richTextBox1.Location = new Point(6, 377);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(617, 194);
+            richTextBox1.TabIndex = 12;
+            richTextBox1.Text = "";
             // 
             // btnCopyRegex
             // 
@@ -152,7 +169,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(6, 125);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(617, 434);
+            flowLayoutPanel1.Size = new Size(617, 220);
             flowLayoutPanel1.TabIndex = 8;
             // 
             // lblRegex
@@ -180,7 +197,7 @@
             btnNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnNext.FlatStyle = FlatStyle.Flat;
             btnNext.ForeColor = SystemColors.Control;
-            btnNext.Location = new Point(1422, 809);
+            btnNext.Location = new Point(1388, 595);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(100, 23);
             btnNext.TabIndex = 5;
@@ -193,7 +210,7 @@
             btnPrev.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnPrev.FlatStyle = FlatStyle.Flat;
             btnPrev.ForeColor = SystemColors.Control;
-            btnPrev.Location = new Point(1316, 809);
+            btnPrev.Location = new Point(1282, 595);
             btnPrev.Name = "btnPrev";
             btnPrev.Size = new Size(100, 23);
             btnPrev.TabIndex = 6;
@@ -209,7 +226,7 @@
             cbStep.ForeColor = SystemColors.Control;
             cbStep.FormattingEnabled = true;
             cbStep.Items.AddRange(new object[] { "Start" });
-            cbStep.Location = new Point(1127, 809);
+            cbStep.Location = new Point(1093, 595);
             cbStep.Name = "cbStep";
             cbStep.Size = new Size(183, 23);
             cbStep.TabIndex = 7;
@@ -222,7 +239,7 @@
             groupBox4.ForeColor = SystemColors.Control;
             groupBox4.Location = new Point(0, 0);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(875, 171);
+            groupBox4.Size = new Size(841, 83);
             groupBox4.TabIndex = 4;
             groupBox4.TabStop = false;
             groupBox4.Text = "Next Steps";
@@ -238,7 +255,7 @@
             nextStepsBox.Location = new Point(3, 19);
             nextStepsBox.Name = "nextStepsBox";
             nextStepsBox.SelectionMode = SelectionMode.None;
-            nextStepsBox.Size = new Size(869, 149);
+            nextStepsBox.Size = new Size(835, 61);
             nextStepsBox.TabIndex = 0;
             // 
             // splitContainer1
@@ -256,8 +273,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(groupBox4);
-            splitContainer1.Size = new Size(875, 349);
-            splitContainer1.SplitterDistance = 174;
+            splitContainer1.Size = new Size(841, 135);
+            splitContainer1.SplitterDistance = 48;
             splitContainer1.TabIndex = 8;
             // 
             // cbAlwaysOnTop
@@ -278,9 +295,9 @@
             panel1.Controls.Add(numericFontSize);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(cbAlwaysOnTop);
-            panel1.Location = new Point(12, 800);
+            panel1.Location = new Point(12, 586);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1093, 42);
+            panel1.Size = new Size(1059, 42);
             panel1.TabIndex = 10;
             // 
             // numericFontSize
@@ -288,7 +305,7 @@
             numericFontSize.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             numericFontSize.BackColor = Color.FromArgb(30, 30, 30);
             numericFontSize.ForeColor = SystemColors.Control;
-            numericFontSize.Location = new Point(958, 9);
+            numericFontSize.Location = new Point(924, 9);
             numericFontSize.Name = "numericFontSize";
             numericFontSize.Size = new Size(120, 23);
             numericFontSize.TabIndex = 13;
@@ -300,18 +317,28 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(898, 13);
+            label2.Location = new Point(864, 13);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 12;
             label2.Text = "Font Size";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 348);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 15);
+            label3.TabIndex = 13;
+            label3.Text = "Notes:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1534, 844);
+            ClientSize = new Size(1500, 630);
             Controls.Add(panel1);
             Controls.Add(splitContainer1);
             Controls.Add(cbStep);
@@ -359,5 +386,7 @@
         private NumericUpDown numericFontSize;
         private Label label2;
         private Button btnCopyRegex;
+        private RichTextBox richTextBox1;
+        private Label label3;
     }
 }
